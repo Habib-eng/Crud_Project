@@ -1,0 +1,65 @@
+.col-md-7{
+    width:100% !important;
+}
+.mb-3{
+    text-align: center !important;
+}
+.article{
+    height:20rem !important;
+}
+.alert{
+    display:none !important;
+}
+.article textarea{
+    height: 90% !important;
+}
+footer .d-flex{
+    font-size: 1.5rem;
+}
+.text-muted i:hover{
+    color: rgb(180, 24, 24);
+}
+.text-muted i {
+    color: rgb(252, 155, 155);
+}
+.col-md-6 {
+    width: 100% !important;
+    padding: 0% 10% !important;
+}
+.upload{
+    text-align: center !important;
+    display:block !important;
+    width: 100% !important;
+    padding: 5% 0%;
+}
+.upload input {
+    top: 0;
+    left:0;
+    background-color: rgb(252, 155, 155);
+}
+.login {
+    text-decoration: none;
+    list-style: none;
+}
+.info{
+    padding:10% 0% !important;
+    background-color: cadetblue !important;
+    padding-left: 3% !important;
+}
+.con {
+    width: 13% !important;
+    
+}
+.formulaire{
+    border-radius: 5px !important;
+    width: 40% !important   ;
+    background: rgb(69, 102, 92);
+    box-shadow: 3px 2px;
+}
+.interface{
+    padding: 20% 30%;
+    width: 100%;
+}
+.space40{
+    height: 40px !important;
+}
