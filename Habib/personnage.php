@@ -1,20 +1,22 @@
 <?php 
-class personnage {
-    public $vie = 100;
-    public $atk = 20;
-    public $nom;
+class form {
+    private $data;
+    public $surround = 'p';
 
-    public function appeler(){
-        echo 'hey'.$this->nom;
+    public function __construct($data = array()){
+        $this->data = $data;
     }
-    public function __construct($nom){
-        $this->nom = $nom;
+
+    private function suround($tag_name){
+        return "<{$this->surround}>{$tag_name}</{$this->surround}>";
     }
-    public function regenerer(){
-        $this->vie = 100;
+
+    public function input($name){
+        return $this->suround("<input type ='text' name = '".$name."' >");
     }
-    public function mort(){
-        return $this->vie == 0;
+
+    public function submit(){
+        return $this->suround("<button type='submit' name='bouton'>Envoyer</button>");
     }
 }
 ?>

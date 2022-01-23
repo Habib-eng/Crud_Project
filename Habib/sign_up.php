@@ -12,7 +12,7 @@ function is_empty($list){
 require 'db.php' ;
 $query = "INSERT INTO `authors` (`firstName`,`lastName`,`email`,`password`,`level`) VALUES (?,?,?,?,?) ";
 $stmt = $db->prepare($query);
-if (isset($_POST["save"]) && (!is_empty($_POST))){
+if (isset($_POST["save"])){
     $data = [$_POST['firstName'],$_POST['lastName'],$_POST['email'],$_POST['password'],(int)$_POST['level']];
     $stmt->execute($data);
 }

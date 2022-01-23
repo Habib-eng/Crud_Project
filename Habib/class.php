@@ -1,8 +1,9 @@
 <?php
-require "personnage.php";
-$mario = new personnage('habib');
-$habib = new personnage('mario');
-$habib->appeler();
-$mario->vie=0;
-var_dump($mario->mort());
+require 'personnage.php';
+$forme = new form();
+echo $forme->input('nom');
+echo $forme->input('prenom');
+echo $forme->input('age');
+echo $forme->input('classe');
+echo $forme->submit();
 ?>
