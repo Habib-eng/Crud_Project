@@ -1,0 +1,58 @@
+@font-face {
+    font-family: f;
+    src: url();
+}
+.body{
+    justify-content: center;
+    margin-inline-start: 370px;
+}
+.row{
+    width: 50%;
+    margin-inline-start: 370px;
+}
+.nav-item:hover{
+    color: aquamarine;
+}
+.btn-primary{
+    color: aquamarine;
+}
+.fa-book{
+    color: grey;
+}
+.fa-book:hover{
+    color: aquamarine;
+}
+.fa-pencil-alt{
+    color: grey;
+}
+.fa-pencil-alt:hover{
+    color: aquamarine;
+}
+.fa-envelope-square{
+    color: grey;
+}
+.fa-envelope-square:hover{
+    color: aquamarine;
+}
+.icons{
+    display: flex;
+    float: right;
+    margin-block-start: 30vh;
+    margin-block-end: 1vh;
+    justify-content: space-around;
+    width: 75px;
+    margin-inline-end: 35px;
+}
+.mot p{
+    font-family: 'Dancing Script', cursive;
+    float: left;
+    margin-block-start: 30vh;
+    margin-block-end: 7vh;
+    margin-inline-start: 10px;
+    font-size: 30px;
+    color: grey;
+    border: border-box;
+}
+.mot p:hover{
+    color: aquamarine;
+}
