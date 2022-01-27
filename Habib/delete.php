@@ -1,6 +1,7 @@
 <?php 
 require 'db.php';
-$_POST['id']
-$db->query("DELETE FROM `data` WHERE `ID`=".$_POST['id']);
+extract($_POST);
+$stmt = $db->prepare(" DELETE FROM `data` WHERE `ID` = ? ");
+$stmt->execute(array($id));
 require 'index.php';
 ?>

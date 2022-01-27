@@ -4,7 +4,6 @@ require 'header.php';
 <div class="container list">
     <div class="row">
         <div class="col">
-        <div class="col-3 bg-light p-3 border">
             <div class="list-group list-group-checkable">
               <input class="list-group-item-check" type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios1" value="" checked>
               <label class="list-group-item py-3" for="listGroupCheckableRadios1">
@@ -31,14 +30,10 @@ require 'header.php';
               </label>
             </div>
         </div>
-        </div>
         <div class="col">
-        <div class="col-sm-9 bg-light p-3 border">
         .col-sm-9: width of 75% above sm breakpoint
         </div>
         </div>
     </div>    
-        
-    </div>
 </div>
 <?php require 'footer.php' ?>

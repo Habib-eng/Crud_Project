@@ -29,14 +29,11 @@ foreach(array_reverse($articles) as $value){
   $txt = fread($file,filesize($value->text_path));
   fclose($file);
   echo "<div class='col-md-6'>
-          <div class='row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
+          <div class='art row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
             <div class='col p-4 d-flex flex-column position-static'>
               <div class='row justify-content-end'>
-                <div class='col-4 con'>
-                <form  method = 'POST' action = 'delete.php'>
-                <input name = 'id' style='display:none' value = ".(string)$value->ID.">
-                <button type='submit' class='btn btn-secondary'>Update</button>
-                </form>
+                <div class='col-4 con' id='ds'>
+                  <button type='button'  class='up btn btn-secondary' >Update <div id='lle' style='display:none'>".(string)$value->ID."</div></button>
                 </div>
                 <div class='col-4 con'>
                 <form  method = 'POST' action = 'delete.php'>
@@ -48,7 +45,15 @@ foreach(array_reverse($articles) as $value){
               <strong class='d-inline-block mb-2 text-success'>".$value->category."</strong>
               <h3 class='mb-0'>".$value->title."</h3>
               <div class='mb-1 text-muted'>".format($value->date)." By ".$value->firstName."  ".$value->lastName."</div>
-              <p class='mb-auto'>".$txt."</p>    
+              <p class='mb-auto'>".$txt."</p>
+              <div class='row'>
+                <div class='col' ><span class='badge rounded-pill bg-info text-dark'><div id = '".(string)$value->ID."'>".$value->likes."</div>&ensp;<i class='bi bi-suit-heart-fill'></i></span></div>
+                <div class='col-6'>
+              </div>
+                <div class='col'>
+                  <button type='button'  class='btn like btn-warning'><i class='bi bi-suit-heart'></i>  like<div style='display:none'>".(string)$value->ID."</div></button>
+                </div>
+              </div>    
             </div>
             <div class='col-auto d-none d-lg-block' style='width:30%'>
               <svg style='width:100%' class='bd-placeholder-img' width='200' height='250' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Thumbnail' preserveAspectRatio='xMidYMid slice' focusable='false'><image href =".(string)$value->image_path." x='0' y='0' height='100%' width='100%'/></svg>
@@ -56,5 +61,6 @@ foreach(array_reverse($articles) as $value){
           </div>
         </div>";
 }
+//<button type='button' class='btn btn-dark comment'><i class='bi bi-chat'></i>Comment</button>
 ?>
 <?php require 'footer.php' ?>

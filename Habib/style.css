@@ -1,3 +1,6 @@
+body {
+    margin: 0%;
+}
 .col-md-7{
     width:100% !important;
 }
@@ -99,4 +102,36 @@ footer .d-flex{
 }
 .list{
     margin: 0px;
+}
+.title{
+    text-align: center;
+    color: rgb(75, 41, 107);
+
+}
+.modif{
+    background: teal !important;
+}
+#closepop-up{
+    cursor: pointer;
+    color: royalblue;
+    animation-timing-function: ease-in;
+    font-size:1.5rem;
+}
+#closepop-up:hover{
+    color: slategrey;
+}
+#pop-upcontainer{
+    position: absolute;
+    position: fixed;
+    z-index: 1;
+    margin: 2% 30%;
+    padding: 2%;
+    padding-top:0% ;
+    border-radius: 0.7rem;
+    text-align: center;
+    background:rgba(116, 140, 163, 0.8);    
+}
+.text-dark{
+    font-size: 1.2rem !important;
+    display: inline-flex !important;
 }
