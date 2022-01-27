@@ -1,0 +1,10 @@
+body {
+	background: url(sje.png);
+	background-repeat:no-repeat ;
+	background-position: 50% -20%;
+}
+.sje {
+	width: 60%;
+	margin: auto;
+	
+}
