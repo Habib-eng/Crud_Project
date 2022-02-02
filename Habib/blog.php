@@ -6,13 +6,13 @@ require 'header.php';
         <div class="col">
             <div class="list-group list-group-checkable">
               <input class="list-group-item-check" type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios1" value="" checked>
-              <label class="list-group-item py-3" for="listGroupCheckableRadios1">
-                First radio
+              First radio
                 <span class="d-block small opacity-50">With support text underneath to add more detail</span>
               </label>
-
+              
               <input class="list-group-item-check" type="radio" name="listGroupCheckableRadios" id="listGroupCheckableRadios2" value="">
               <label class="list-group-item py-3" for="listGroupCheckableRadios2">
+              <label class="list-group-item py-3" for="listGroupCheckableRadios1">
                 Second radio
                 <span class="d-block small opacity-50">Some other text goes here</span>
               </label>

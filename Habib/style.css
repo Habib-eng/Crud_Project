@@ -10,8 +10,8 @@ body {
 .article{
     height:20rem !important;
 }
-.alert{
-    display:none !important;
+.alert-success{
+    display: none;
 }
 .article textarea{
     height: 90% !important;
@@ -134,4 +134,22 @@ footer .d-flex{
 .text-dark{
     font-size: 1.2rem !important;
     display: inline-flex !important;
+}
+.row .col-6{
+    width: 50%;
+}
+.row .col {
+    display: contents;
+}
+.row .col .btn-warning{
+    margin-right: 0.5rem !important;
+}
+.form-floating {
+    display: none;
+    margin-top: 1rem !important;
+    width: 80% !important;
+}
+.toast{
+    display: block !important;
+    margin-top: 1rem !important ;
 }

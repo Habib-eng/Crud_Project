@@ -46,7 +46,7 @@
                 <div style = 'margin-left:95%'><i id='closepop-up' class='bi bi-x-circle'></i></div>
                 <div class='title'><h2>You can Modify your artcile here !</h2></div>
             </div>
-            <form enctype='multipart/form-data' class='needs-validation' method='post' action='#' id = 'formup'>
+            <form enctype='multipart/form-data' class='needs-validation' method='post' action='#' id ='formup'>
               <div class='row g-3'>
                 <div class='col-12'>
                   <label for='email' class='form-label'>Email</label>
@@ -82,7 +82,6 @@
                 <label for='exampleFormControlTextarea1' class='form-label'>you can continue your article here</label>
                 <textarea required class='form-control' name='exampleFormControlTextarea1' rows='3'></textarea>
               </div>
-              <input style='display:none' id='id1' name='ident' value=''>
               <hr class='my-4'>
               <button class='w-100 modif btn btn-primary btn-lg' name='save' type='submit' pattern=''>Modify</button>
             </form>

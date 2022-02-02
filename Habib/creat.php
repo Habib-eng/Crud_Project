@@ -25,7 +25,7 @@ if(isset($_POST["save"])){
   </div>
     <div class='col-md-7 col-lg-8' style='position:relativc;width:100%'>
       <h4 class='mb-3'>Informations</h4>
-      <div class="alert alert-success" style="display:none" role="alert">
+      <div id="alerte" class="alert alert-success" role="alert">
           Your article has been successfully submitted!
       </div>
       <form enctype="multipart/form-data" class='needs-validation' method="post" action="creat.php">
@@ -84,9 +84,7 @@ if(isset($_POST["save"])){
           <label for='upload-photo'>Browse...</label><br>
           <input type='file' name='fichier' class='upload-photo'/><br>
         </div>
-        <button onclick =" function affiche(){
-          document.getElementByClassName('alert').style.display = 'block';
-          }" class='w-100 btn btn-primary btn-lg' name="save" type='submit' pattern=''>Post your article</button>
+        <button class='w-100 btn btn-primary btn-lg' name="save" type='submit' pattern=''>Post your article</button>
       </form>
     </div>
   </div>

@@ -28,18 +28,15 @@ foreach(array_reverse($articles) as $value){
   $file = fopen($value->text_path,'r');
   $txt = fread($file,filesize($value->text_path));
   fclose($file);
-  echo "<div class='col-md-6'>
+  echo "<div class='col-md-6' id = '".(string)$value->ID."'>
           <div class='art row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
-            <div class='col p-4 d-flex flex-column position-static'>
+            <div class= 'col p-4 d-flex flex-column position-static'>
               <div class='row justify-content-end'>
                 <div class='col-4 con' id='ds'>
-                  <button type='button'  class='up btn btn-secondary' >Update <div id='lle' style='display:none'>".(string)$value->ID."</div></button>
+                  <button type='button' target = '".(string)$value->ID."'  class='up btn btn-secondary' >Update <div id='lle' style='display:none'>".(string)$value->ID."</div></button>
                 </div>
                 <div class='col-4 con'>
-                <form  method = 'POST' action = 'delete.php'>
-                <input name = 'id' style='display:none' value = ".(string)$value->ID.">
-                <button type='submit'  class='btn btn-danger'>Delete</button>
-                </form>
+                <button type='button' target = '".(string)$value->ID."' class='btn btn-danger'>Delete</button>
                 </div>
               </div>
               <strong class='d-inline-block mb-2 text-success'>".$value->category."</strong>
@@ -47,12 +44,18 @@ foreach(array_reverse($articles) as $value){
               <div class='mb-1 text-muted'>".format($value->date)." By ".$value->firstName."  ".$value->lastName."</div>
               <p class='mb-auto'>".$txt."</p>
               <div class='row'>
-                <div class='col' ><span class='badge rounded-pill bg-info text-dark'><div id = '".(string)$value->ID."'>".$value->likes."</div>&ensp;<i class='bi bi-suit-heart-fill'></i></span></div>
-                <div class='col-6'>
-              </div>
+                <div class='col' ><span class='badge rounded-pill bg-info text-dark'><div id ='likeslayout".(string)$value->ID."'>".$value->likes."</div>&ensp;<i class='bi bi-suit-heart-fill'></i></span></div>
+                <div class='col-6'></div>
                 <div class='col'>
-                  <button type='button'  class='btn like btn-warning'><i class='bi bi-suit-heart'></i>  like<div style='display:none'>".(string)$value->ID."</div></button>
+                  <button type='button' class='btn like btn-warning' target='".(string)$value->ID." '><i class='bi bi-suit-heart'></i>  like<div style='display:none'>".(string)$value->ID."</div></button>
+                  <button type='button' class='btn comment btn-dark'><i class='bi bi-chat'></i>  Comment<div style='display:none'>".(string)$value->ID."</div></button>
                 </div>
+              </div>
+              <div class = 'form-floating' id ='textareaN".(string)$value->ID."'>
+                <textarea  class = 'form-control' placeholder='Leave a comment here' id='floatingTextarea''></textarea>
+                <label for='floatingTextarea'>Comments</label>
+              </div>
+              <div class='row' id = 'commentslayout".(string)$value->ID."' style ='display:none;overflow-x:auto;overflow-y:auto;max-height:10rem'>
               </div>    
             </div>
             <div class='col-auto d-none d-lg-block' style='width:30%'>
